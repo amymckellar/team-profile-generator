@@ -13,13 +13,13 @@ test("Set name", () => {
 
 test("Set ID", () => {
   const testValue = 100;
-  const e = new Employee("Foo", testValue);
+  const e = new Employee("Amy", testValue);
   expect(e.id).toBe(testValue);
 });
 
 test("Set Email", () => {
-  const testValue = "test@test.com";
-  const e = new Employee("Foo", 1, testValue);
+  const testValue = "amy_mckellar@yahoo.com";
+  const e = new Employee("Amy", 1, testValue);
   expect(e.email).toBe(testValue);
 });
 
@@ -31,18 +31,18 @@ test("Get Name", () => {
 
 test("Get ID", () => {
   const testValue = 100;
-  const e = new Employee("Foo", testValue);
+  const e = new Employee("Amy", testValue);
   expect(e.getId()).toBe(testValue);
 });
 
 test("Get Email", () => {
-  const testValue = "test@test.com";
+  const testValue = "amy_mckellar@yahoo.com";
   const e = new Employee("Foo", 1, testValue);
   expect(e.getEmail()).toBe(testValue);
 });
 
-test('getRole() should return "Employee"', () => {
+test('Return "Employee"', () => {
   const testValue = "Employee";
-  const e = new Employee("Amy", 1, "test@test.com");
+  const e = new Employee("Amy", 1, "amy_mckellar@yahoo.com");
   expect(e.getRole()).toBe(testValue);
 });
