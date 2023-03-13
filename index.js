@@ -46,7 +46,6 @@ function startTheApp() {
       ])
       .then((answers) => {
         const manager = new Manager(
-          //here are the answers to the manager questions
           answers.Name,
           answers.Id,
           answers.Email,
@@ -88,7 +87,6 @@ function startTheApp() {
   }
 
   function createEngineer() {
-    //start inquirer questions for the second time with new questions and new answers
     inquirer
       .prompt([
         {
@@ -114,7 +112,6 @@ function startTheApp() {
       ])
       .then((answers) => {
         const engineer = new Engineer(
-          //here are the answers to the engineer questions
           answers.Name,
           answers.Id,
           answers.Email,
@@ -151,7 +148,6 @@ function startTheApp() {
         },
       ])
       .then((answers) => {
-        //here are the answers to the intern questions
         const intern = new Intern(
           answers.Name,
           answers.Id,

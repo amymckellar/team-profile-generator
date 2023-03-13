@@ -37,7 +37,7 @@ test("Get ID", () => {
 
 test("Get Email", () => {
   const testValue = "amy_mckellar@yahoo.com";
-  const e = new Employee("Foo", 1, testValue);
+  const e = new Employee("Amy", 1, testValue);
   expect(e.getEmail()).toBe(testValue);
 });
 
