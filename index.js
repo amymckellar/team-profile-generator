@@ -16,7 +16,6 @@ console.log(
   "Welcome to the Team! Please answer the following questions to build your team."
 );
 
-// First message to the user
 console.log("Welcome to the team!");
 
 function startTheApp() {

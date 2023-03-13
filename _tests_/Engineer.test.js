@@ -1,4 +1,4 @@
-const Engineer = require("../classes/Engineer");
+const Engineer = require("../_tests_/Engineer");
 
 test("Set GitHUb account", () => {
   const testValue = "GitHubUser";
