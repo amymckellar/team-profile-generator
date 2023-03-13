@@ -6,7 +6,6 @@ For this challenge I created a team profile generate that allows the user to add
 
 ## Table of Contents
 
-- [Installation](#installation)
 - [Usage](#usage)
 - [Questions](#questions)
 
