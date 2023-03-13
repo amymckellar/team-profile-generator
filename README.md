@@ -11,8 +11,6 @@ For this challenge I created a team profile generate that allows the user to add
 
 ## Screenshot
 
-N/A
-
 ## Usage
 
 In the main folder, enter the following command to generate the questions:
