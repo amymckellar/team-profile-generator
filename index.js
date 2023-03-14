@@ -11,13 +11,13 @@ const outputPath = path.join(OUTPUT_DIR, "myteam.html");
 const getDataReadyForOutput = require("./createTeamHTML.js");
 
 const teamMembers = [];
-
+// First message to the user
 console.log(
   "Welcome to the Team! Please answer the following questions to build your team."
 );
 
 console.log("Welcome to the team!");
-
+// create the questions for manager the user
 function startTheApp() {
   function createManager() {
     inquirer
@@ -44,6 +44,7 @@ function startTheApp() {
           message: "What is the team manager's office number?",
         },
       ])
+      //  function to answer the questions
       .then((answers) => {
         const manager = new Manager(
           answers.Name,
@@ -57,7 +58,7 @@ function startTheApp() {
         askMoreTeamQuestions();
       });
   }
-
+  // create the questions for the user
   function askMoreTeamQuestions() {
     inquirer
       .prompt([
@@ -72,6 +73,7 @@ function startTheApp() {
           ],
         },
       ])
+      // asks the user to pick which team member to create
       .then((userChoice) => {
         switch (userChoice.memberChoice) {
           case "Engineer":
@@ -85,7 +87,7 @@ function startTheApp() {
         }
       });
   }
-
+  // create the questions for the engineer
   function createEngineer() {
     inquirer
       .prompt([
@@ -110,6 +112,7 @@ function startTheApp() {
           message: "What is your engineer's Github?",
         },
       ])
+      // function to answer the questions
       .then((answers) => {
         const engineer = new Engineer(
           answers.Name,
@@ -122,7 +125,7 @@ function startTheApp() {
         askMoreTeamQuestions();
       });
   }
-
+  // create the questions for the intern
   function createIntern() {
     inquirer
       .prompt([
@@ -147,6 +150,7 @@ function startTheApp() {
           message: "What is your intern's school?",
         },
       ])
+      // function to answer the questions
       .then((answers) => {
         const intern = new Intern(
           answers.Name,
@@ -159,12 +163,12 @@ function startTheApp() {
         askMoreTeamQuestions();
       });
   }
-
+  // this will create the file
   function buildTeam() {
     fs.writeFileSync(outputPath, getDataReadyForOutput(teamMembers), "utf-8");
   }
-
+  // this function is used to create one manager
   createManager();
 }
-
+// this starts the app
 startTheApp();
